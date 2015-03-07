@@ -27,6 +27,7 @@ class HttpAdapterFactory
     const GUZZLE_HTTP = 'guzzle_http';
     const HTTPFUL = 'httpful';
     const REACT = 'react';
+    const REQUESTS = 'requests';
     const SOCKET = 'socket';
     const ZEND1 = 'zend1';
     const ZEND2 = 'zend2';
@@ -52,6 +53,10 @@ class HttpAdapterFactory
         self::BUZZ => array(
             'adapter' => 'Ivory\HttpAdapter\BuzzHttpAdapter',
             'client'  => 'Buzz\Browser',
+        ),
+        self::REQUESTS => array(
+            'adapter' => 'Ivory\HttpAdapter\RequestsHttpAdapter',
+            'client'  => '\Requests',
         ),
         self::REACT => array(
             'adapter' => 'Ivory\HttpAdapter\ReactHttpAdapter',
